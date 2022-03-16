@@ -44,6 +44,7 @@
 
   /****COLORS*****/
   --dark-main-gray: var(--gray-700);
+  --dark-hover-gray: var(--gray-800);
   --medium-main-gray: var(--gray-300);
   --light-main-gray: var(--gray-100);
   --pink-main: var(--pink-500);
@@ -68,6 +69,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: var(--light-main-gray);
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -84,6 +89,59 @@ main > section {
 
 h1,
 h2,
-h3 {
+h3,
+a {
   font-family: var(--header-font);
+}
+
+/****HEADER****/
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  scroll-behavior: smooth;
+  padding: 0.3rem 0.5rem;
+
+  align-items: center;
+  width: 100%;
+  background-color: var(--gray-50);
+  flex-wrap: wrap;
+}
+
+header li {
+  list-style: none;
+  margin: 1vw;
+  color: var(--dark-main-gray);
+}
+
+header li:hover {
+  text-decoration: underline solid 1px;
+  color: var(--dark-hover-gray);
+}
+
+header a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+
+  list-style: none;
+  cursor: pointer;
+  padding: 0.4rem 0.7rem 0.4rem 0.7rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.logo {
+  max-width: 15%;
+  max-height: auto;
 }
