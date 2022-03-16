@@ -145,3 +145,12 @@ nav ul {
   max-width: 15%;
   max-height: auto;
 }
+#menu {
+  flex-basis: 100%;
+  padding: 1rem;
+}
+#burgerbutton {
+  display: inline-block;
+
+  cursor: pointer;
+}
