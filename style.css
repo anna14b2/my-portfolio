@@ -27,12 +27,13 @@
 
   /*****FONT SIZE*****/
   /* Font scale heading */
-  --font-size-xxl: 3.052rem;
-  --font-size-xl: 2.441rem;
-  --font-size-l: 1.953rem;
-  --font-size-m: 1.563rem;
-  --font-size-s: 1.25rem;
-  --font-size-xs: 1rem;
+  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --font-size-xxxl: clamp(3rem, 3.5vw + 2.1rem, 5rem);
 
   /* Spacing */
   --spacing-10: 0.625rem;
@@ -40,7 +41,11 @@
   --spacing-20: 1.25rem;
   --spacing-30: 1.875rem;
   --spacing-40: 2.5rem;
+  --spacing-50: 3rem;
+  --spacing-60: 3.8rem;
   --spacing-80: 5rem;
+  --spacing-90: 7.5rem;
+  --spacing-100: 10rem;
 
   /****COLORS*****/
   --dark-main-gray: var(--gray-700);
@@ -51,12 +56,13 @@
   --brown-main: var(--brown-500);
 
   /****ALIASES*****/
-  --display-heading: var(--font-size-xxl);
+  --display-heading: var(--font-size-xxxl);
+  --heading-h1: var(--font-size-xxl);
   --heading-h2: var(--font-size-xl);
-  --heading-h3: var(--font-size-l);
-  --body-text-lead: var(--font-size-m);
-  --body-text: var(--font-size-s);
-  --body-text-small: var(--font-size-body-xs);
+  --heading-h3: var(--font-size-lg);
+  --body-text-lead: var(--font-size-md);
+  --body-text: var(--font-size-base);
+  --body-text-small: var(--font-size-body-sm);
 
   /***FONTS****/
   --header-font: "Yeseva One", cursive;
@@ -92,6 +98,64 @@ h2,
 h3,
 a {
   font-family: var(--header-font);
+}
+
+p {
+  font-family: var(--text-font);
+  font-size: var(--body-text);
+}
+
+h1,
+.h1 {
+  font-size: var(--display-heading);
+  color: var(--dark-main-gray);
+}
+
+h2,
+.h2 {
+  font-size: var(--heading-h2);
+  color: var(--dark-main-gray);
+}
+
+h3,
+.h3 {
+  font-size: var(--heading-h3);
+  color: var(--dark-main-gray);
+}
+
+/* BUTTONS */
+.btn {
+  border-radius: 50px;
+  padding: var(--spacing-10) var(--spacing-20);
+  max-width: 300px;
+  border: none;
+  font-size: var(--body-text);
+  transition: all 0.2s;
+  font-family: var(--header-font);
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.neutral {
+  color: var(--light-main-gray);
+  background: var(--dark-main-gray);
+}
+
+.neutral:hover {
+  background: var(--dark-hover-gray);
+}
+
+.inverted {
+  color: var(--dark-main-gray);
+  background: none;
+  border: solid 1.5px var(--dark-main-gray);
+}
+
+.inverted:hover {
+  color: var(--dark-hover-gray);
+  border: solid 1.5px var(--dark-hover-gray);
 }
 
 /****HEADER****/
@@ -142,7 +206,7 @@ nav ul {
 }
 
 .logo {
-  max-width: 15%;
+  max-width: 60%;
   max-height: auto;
 }
 #menu {
@@ -153,4 +217,86 @@ nav ul {
   display: inline-block;
 
   cursor: pointer;
+}
+
+/**First section**/
+#first_section {
+  background-image: url(img/jeg.png);
+  width: 100%;
+  height: 56.25vh;
+  background-position: 10%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 2rem;
+}
+
+#first_section .introduction {
+  grid-column: 4/6;
+  padding-top: 20rem;
+}
+
+.quote-p {
+  display: flex;
+  padding-left: 4rem;
+  padding-right: 6rem;
+  padding-top: 2rem;
+}
+
+.quote-left {
+  padding: 0.5rem;
+  margin-top: -1rem;
+}
+
+.quote-right {
+  padding: 0.5rem;
+  padding-top: 3rem;
+}
+
+#first_section .socials a {
+  display: flex;
+  text-decoration: none;
+}
+
+#first_section .socials p {
+  padding-top: 0.3rem;
+}
+
+@media (min-width: 700px) {
+  #first_section {
+    padding-top: 2rem;
+  }
+
+  #first_section .section_wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #first_section .introduction {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 30rem;
+  }
+
+  #first_section .introduction h3 {
+    padding-left: 7rem;
+    padding-top: 1rem;
+  }
+
+  #first_section .introduction h1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: var(--pink-main);
+    margin: 0.5rem;
+    margin-left: -4rem;
+    padding-left: 5rem;
+    border-radius: 15px;
+  }
+
+  #first_section .socials {
+    padding-top: 5rem;
+    display: flex;
+  }
 }
