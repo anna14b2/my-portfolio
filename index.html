@@ -14,41 +14,212 @@
     />
   </head>
   <body>
-    <header id="menu">
+
+
+    <header class="nav_bar">
       <figure class="logo">
-        <a href="index.html"><img class="logo" src="img/anna-logo.svg" alt="Logo" /></a>
+        <a href="index.html"
+          ><img class="logo" src="img/anna-logo.svg" alt="Logo"
+        /></a>
       </figure>
 
-      <nav>
+      <nav class="navigation">
+        <ul>
+          <a href="#"><li>my cv</li></a>
+          <a href="#"><li>projects</li></a>
+          <a href="#"><li>contact</li></a>
+        </ul>
+        <!-- BURGER MENU -->
+        <button type="button" class="burger" id="menu-btn" name>
+          <span class="burger-top"></span>
+          <span class="burger-middle"></span>
+          <span class="burger-bottom"></span>
+        </button>
+      </nav>
+
+      <!-- MOBILE MENU  -->
+      <div class="mobile-menu hidden" id="menu">
         <ul id="menu">
           <a href="#"><li>my cv</li></a>
           <a href="#"><li>projects</li></a>
           <a href="#"><li>contact</li></a>
         </ul>
-      </nav>
+      </div>
     </header>
+
     <main>
-        <section id="first_section">
-            <div class="section_wrapper">
-              <article class="introduction">
-                <h2>hello there,</h2>
-                <h3>nice to see you!</h3>
-                <h1>I am Anna Pálsdóttir</h1>
-                <div class="buttons"> 
-                <button class="btn neutral">my cv</button>
-                <button class="btn inverted">projects</button>
-                </div>
-              <div class="socials">
-                
-             
-              </div>
-            </div>
+      <section id="first_section">
+        <figure>
+          <img src="img/jeg.png" alt="" />
+        </figure>
+        <article class="introduction">
+          <h2>hello there,</h2>
+          <h3>nice to see you!</h3>
+          <h1>I am Anna Pálsdóttir</h1>
+          <div class="buttons">
+            <button class="btn neutral">my cv</button>
+            <button class="btn inverted">projects</button>
+          </div>
         </article>
-          </section>
+      </section>
+
+      <section id="second_section">
+        <article>
+          <h2>who I am</h2>
+          <p>
+            I am a 21 year old girl from Iceland. I am very interested in web
+            design and creating. I enjoy tackling new tasks and I always do my
+            best to solve them in the best possible way. I work well under
+            pressure and can keep my head clear. I am punctual, communicate well
+            with people and keep a positive attitude. I moved to denmark in
+            summer 2020 and can speak good danish. Now I am studying Multimedia
+            Design in Kea, where I focus on digital design.
+          </p>
+        </article>
+        <ul>
+          <h3>my hobbies</h3>
+          <li> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#3a3a3a" d="M19.3 16.9c.4-.7.7-1.5.7-2.4c0-2.5-2-4.5-4.5-4.5S11 12 11 14.5s2 4.5 4.5 4.5c.9 0 1.7-.3 2.4-.7l3.2 3.2l1.4-1.4l-3.2-3.2zm-3.8.1c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5s-1.1 2.5-2.5 2.5zM12 20v2C6.48 22 2 17.52 2 12S6.48 2 12 2c4.84 0 8.87 3.44 9.8 8h-2.07A8 8 0 0 0 15 4.59V5c0 1.1-.9 2-2 2h-2v2c0 .55-.45 1-1 1H8v2h2v3H9l-4.79-4.79C4.08 10.79 4 11.38 4 12c0 4.41 3.59 8 8 8z"></path></svg> <p> Travel</p></li>
+          <li> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#3a3a3a" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"></path></svg> <p> Web design </p></li>
+          <li> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-outline" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><g fill="none" stroke="#3a3a3a" stroke-linejoin="round" stroke-width="4" transform="translate(4 4)"><path d="M0 38L14 6l10 24l4-12l12 20z"></path><circle cx="33" cy="5" r="5"></circle></g></svg> <p> Outdoor activities </p></li>
+      
+        </ul>
+      </section>
+      <section id="third_section">
+        <h2>project overview</h2>
+        <div class="projects">
+          <div class="tail">
+            <a href="#"><h3>tailwind coding</h3></a>
+          </div>
+          <div class="trash">
+            <a href="#"><h3>trash catcher spil</h3></a>
+          </div>
+        </div>
+        <div class="projects2"> 
+          <div class="quickit">
+            <a href="#"><h3>quickit startup</h3></a>
+          </div>
+          <div class="ro"> 
+            <a href="#"><h3> redesign</h3></a>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section id="fourth_section">
+        <h2>my cv</h2>
+        <div class="section_wraper"> 
+           <article>
+              <h3>my education</h3>
+            <div>
+                <li>
+                  <p class="plg"> Multimedia design - AP degree </p>
+           
+                  <div class="time_location"> 
+                   <p class="psm">
+                     January 2021 - January 2023 
+                    </p>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--cil" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="currentColor" d="M253.924 127.592a64 64 0 1 0 64 64a64.073 64.073 0 0 0-64-64Zm0 96a32 32 0 1 1 32-32a32.037 32.037 0 0 1-32 32Z"></path><path fill="currentColor" d="M376.906 68.515A173.922 173.922 0 0 0 108.2 286.426l120.907 185.613a29.619 29.619 0 0 0 49.635 0l120.911-185.613a173.921 173.921 0 0 0-22.747-217.911Zm-4.065 200.444l-118.916 182.55l-118.917-182.55c-36.4-55.879-28.593-130.659 18.563-177.817a141.92 141.92 0 0 1 200.708 0c47.156 47.158 54.962 121.938 18.562 177.817Z"></path></svg>
+                   <p class="psm">KEA, 2200 København, DK</p>
+                   </div>
+                 </li>
+             </div>
+          <div>
+            <li> 
+           <p class="plg">  Kvennaskólinn í Reykjavík - social sciences</p>
+         <div class="time_location"> 
+          <p class="psm">August 2016 - June 2019</p>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--cil" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="currentColor" d="M253.924 127.592a64 64 0 1 0 64 64a64.073 64.073 0 0 0-64-64Zm0 96a32 32 0 1 1 32-32a32.037 32.037 0 0 1-32 32Z"></path><path fill="currentColor" d="M376.906 68.515A173.922 173.922 0 0 0 108.2 286.426l120.907 185.613a29.619 29.619 0 0 0 49.635 0l120.911-185.613a173.921 173.921 0 0 0-22.747-217.911Zm-4.065 200.444l-118.916 182.55l-118.917-182.55c-36.4-55.879-28.593-130.659 18.563-177.817a141.92 141.92 0 0 1 200.708 0c47.156 47.158 54.962 121.938 18.562 177.817Z"></path></svg>
+          <p class="psm">101 Reykjavík, Iceland</p>
+        </div>
+        </li>
+          </div>
+        </article>
+          <div class="skills"> 
+            <h3>personal skills</h3>
+            <li> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons-solid" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="#3a3a3a" d="M13 6a3 3 0 1 1-6 0a3 3 0 0 1 6 0Zm5 2a2 2 0 1 1-4 0a2 2 0 0 1 4 0Zm-4 7a4 4 0 0 0-8 0v3h8v-3ZM6 8a2 2 0 1 1-4 0a2 2 0 0 1 4 0Zm10 10v-3a5.972 5.972 0 0 0-.75-2.906A3.005 3.005 0 0 1 19 15v3h-3ZM4.75 12.094A5.973 5.973 0 0 0 4 15v3H1v-3a3 3 0 0 1 3.75-2.906Z"></path></svg><p> Groupwork - cooperation </p></li>
+            <li> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#3a3a3a" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2c0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.987 7.987 0 0 1 5.08 16zm2.95-8H5.08a7.987 7.987 0 0 1 4.33-3.56A15.65 15.65 0 0 0 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2c0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2c0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2c0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"></path></svg> <p>Icelandic, english & danish speaking</p></li>
+            <li> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#3a3a3a" d="M16.84 2.73c-.39 0-.77.15-1.07.44l-2.12 2.12l5.3 5.31l2.12-2.1c.6-.61.6-1.56 0-2.14L17.9 3.17c-.3-.29-.68-.44-1.06-.44M12.94 6l-8.1 8.11l2.56.28l.18 2.29l2.28.17l.29 2.56l8.1-8.11m-14 3.74L2.5 21.73l6.7-1.79l-.24-2.16l-2.31-.17l-.18-2.32"></path></svg> <p> Creative </p></li>
+            <li> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--bx" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#3a3a3a" d="M20 8h-5.612l1.123-3.367c.202-.608.1-1.282-.275-1.802S14.253 2 13.612 2H12c-.297 0-.578.132-.769.36L6.531 8H4c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h13.307a2.01 2.01 0 0 0 1.873-1.298l2.757-7.351A1 1 0 0 0 22 12v-2c0-1.103-.897-2-2-2zM4 10h2v9H4v-9zm16 1.819L17.307 19H8V9.362L12.468 4h1.146l-1.562 4.683A.998.998 0 0 0 13 10h7v1.819z"></path></svg> <p> Positive </p></li>
+          </div>
+          </div>
+          <h3>employment history</h3>
+          <article class="section_wraper"> 
+          <ul> 
+          <li> <p class="plg">  Waiter, Hereford Steakhouse </p> 
+            <div class="time_location">
+          <p class="psm">October 2021 - present</p>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--cil" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="currentColor" d="M253.924 127.592a64 64 0 1 0 64 64a64.073 64.073 0 0 0-64-64Zm0 96a32 32 0 1 1 32-32a32.037 32.037 0 0 1-32 32Z"></path><path fill="currentColor" d="M376.906 68.515A173.922 173.922 0 0 0 108.2 286.426l120.907 185.613a29.619 29.619 0 0 0 49.635 0l120.911-185.613a173.921 173.921 0 0 0-22.747-217.911Zm-4.065 200.444l-118.916 182.55l-118.917-182.55c-36.4-55.879-28.593-130.659 18.563-177.817a141.92 141.92 0 0 1 200.708 0c47.156 47.158 54.962 121.938 18.562 177.817Z"></path></svg>
+        <p class="psm">1264 København, DK</p></li>
+            
+        <li> <p class="plg"> Sales assistance, IKEA </p> 
+          <div class="time_location">
+        <p class="psm">Summer 2018 - Fall 2019</p>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--cil" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="currentColor" d="M253.924 127.592a64 64 0 1 0 64 64a64.073 64.073 0 0 0-64-64Zm0 96a32 32 0 1 1 32-32a32.037 32.037 0 0 1-32 32Z"></path><path fill="currentColor" d="M376.906 68.515A173.922 173.922 0 0 0 108.2 286.426l120.907 185.613a29.619 29.619 0 0 0 49.635 0l120.911-185.613a173.921 173.921 0 0 0-22.747-217.911Zm-4.065 200.444l-118.916 182.55l-118.917-182.55c-36.4-55.879-28.593-130.659 18.563-177.817a141.92 141.92 0 0 1 200.708 0c47.156 47.158 54.962 121.938 18.562 177.817Z"></path></svg>
+      <p class="psm">210 Garðabær, Iceland</p></li>
+        </ul>
+       
+        <ul>
+          <li>
+            <p class="plg">Assistance teacher, kindergarten</p>
+            <div class="time_location"> 
+            <p class="psm">Fall 2019 - summer 2020</p>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--cil" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="currentColor" d="M253.924 127.592a64 64 0 1 0 64 64a64.073 64.073 0 0 0-64-64Zm0 96a32 32 0 1 1 32-32a32.037 32.037 0 0 1-32 32Z"></path><path fill="currentColor" d="M376.906 68.515A173.922 173.922 0 0 0 108.2 286.426l120.907 185.613a29.619 29.619 0 0 0 49.635 0l120.911-185.613a173.921 173.921 0 0 0-22.747-217.911Zm-4.065 200.444l-118.916 182.55l-118.917-182.55c-36.4-55.879-28.593-130.659 18.563-177.817a141.92 141.92 0 0 1 200.708 0c47.156 47.158 54.962 121.938 18.562 177.817Z"></path></svg>
+            <p class="psm">203 Kópavogur, Iceland</p>
+          </div>
+          </li>
+          <li>
+            <p class="plg">Summer camp instructor, KFUM</p>
+            <div class="time_location">
+            <p class="psm">Summers 2015 - 2021</p>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--cil" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="currentColor" d="M253.924 127.592a64 64 0 1 0 64 64a64.073 64.073 0 0 0-64-64Zm0 96a32 32 0 1 1 32-32a32.037 32.037 0 0 1-32 32Z"></path><path fill="currentColor" d="M376.906 68.515A173.922 173.922 0 0 0 108.2 286.426l120.907 185.613a29.619 29.619 0 0 0 49.635 0l120.911-185.613a173.921 173.921 0 0 0-22.747-217.911Zm-4.065 200.444l-118.916 182.55l-118.917-182.55c-36.4-55.879-28.593-130.659 18.563-177.817a141.92 141.92 0 0 1 200.708 0c47.156 47.158 54.962 121.938 18.562 177.817Z"></path></svg>
+            <p class="psm">Country side Iceland</p>
+          </div>
+          </li>
+        </ul>
+      </div>
+        
+    </article>
+      </section>
     </main>
     <footer>
-      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z"></path></svg><p>annapasldott1r</p></a>
-      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"></path></svg><p>Anna Pálsdóttir</p></a>
+      <a href="#"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          aria-hidden="true"
+          role="img"
+          class="iconify iconify--mdi"
+          width="32"
+          height="32"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z"
+          ></path>
+        </svg>
+        <p>annapasldott1r</p></a
+      >
+      <a href="#"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          aria-hidden="true"
+          role="img"
+          class="iconify iconify--mdi"
+          width="32"
+          height="32"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"
+          ></path>
+        </svg>
+        <p>Anna Pálsdóttir</p></a
+      >
     </footer>
     <script src="index.js"></script>
   </body>
