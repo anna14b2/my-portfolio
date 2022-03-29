@@ -270,6 +270,27 @@ header a {
   transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
 
+@media screen and (max-width: 760px) {
+  .burger {
+    display: block;
+  }
+
+  .navigation {
+    justify-content: space-between;
+  }
+
+  .navigation ul {
+    display: none;
+  }
+}
+
+@media (min-width: 750px) {
+  .navigation li {
+    padding: var(--spacing-10);
+    padding-top: 1rem;
+  }
+}
+
 /* MOBILE MENU */
 .mobile-menu {
   position: fixed;
@@ -281,6 +302,8 @@ header a {
   padding: var(--spacing-20);
   transition: all 0.6s;
   z-index: 10;
+  background-color: var(--gray-50);
+  margin: var(--spacing-10);
 }
 
 .mobile-menu li {
@@ -310,6 +333,14 @@ header a {
 
 #first_section button {
   margin: var(--spacing-10);
+}
+
+#first_section figure {
+  position: relative;
+}
+
+#first_section h2 {
+  padding: auto;
 }
 
 /** Second section**/
@@ -398,6 +429,45 @@ header a {
   margin: var(--spacing-10);
 }
 
+/****Projects****/
+
+/*Section 1*/
+
+.section1,
+.project1,
+.project2,
+.project3 {
+  margin: var(--spacing-50);
+}
+
+.section1 figure {
+  position: relative;
+  margin-right: var(--spacing-20);
+}
+.section1 article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-column: 2;
+}
+
+.section1 h2 {
+  background-color: var(--pink-main);
+  border-radius: 40px;
+  padding: var(--spacing-30);
+  margin-left: -10rem;
+  padding-left: var(--spacing-100);
+}
+
+.section1 h3 {
+  padding-left: var(--spacing-60);
+  padding-top: var(--spacing-20);
+}
+
+.section1 h4 {
+  padding-top: var(--spacing-80);
+}
+
 @media (min-width: 700px) {
   #first_section {
     padding-top: var(--spacing-10);
@@ -480,5 +550,27 @@ header a {
   #fourth_section li {
     margin-right: var(--spacing-80);
     margin-bottom: auto;
+  }
+
+  /*Projects site*/
+  /**section1**/
+
+  .section1,
+  .project1,
+  .project2,
+  .project3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project1 figure,
+  .project2 figure,
+  .project3 figure {
+    margin-left: var(--spacing-70);
+  }
+
+  .section1 h2 {
+    margin-left: -20rem;
+    padding-left: var(--spacing-100);
   }
 }
