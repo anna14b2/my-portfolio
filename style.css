@@ -191,7 +191,8 @@ header {
 
   align-items: center;
   width: 100%;
-  background-color: var(--gray-50);
+  background-color: var(--light-main-gray);
+  box-shadow: 4px -4px 10px #afafaf;
   flex-wrap: wrap;
 }
 
@@ -367,14 +368,27 @@ header a {
 }
 
 /** Second section**/
-#second_section li {
-  display: flex;
-  flex-direction: row;
+#second_section p {
+  padding: var(--spacing-20);
 }
 
 #second_section h2 {
   margin-bottom: var(--spacing-30);
   margin-top: var(--spacing-15);
+  background-color: var(--pink-main);
+  margin-left: -24rem;
+  padding-left: 24rem;
+  padding-top: var(--spacing-20);
+  padding-bottom: var(--spacing-20);
+  border-radius: 40px;
+}
+
+#second_section button {
+  margin: var(--spacing-30) var(--spacing-10);
+}
+
+#second_section img {
+  padding-top: var(--spacing-30);
 }
 
 /*Third section*/
@@ -382,10 +396,27 @@ header a {
 .quickit,
 .trash,
 .tail {
-  background-color: var(--brown-main);
+  background: var(--brown-main);
   padding: 1rem;
   margin: 1rem;
   border-radius: 40px;
+}
+
+.trash:hover {
+  background: url(img/trashes.svg);
+  transition-delay: 2s;
+}
+
+.tail:hover {
+  background: url(img/tailwind\ 1.svg);
+}
+
+.quickit:hover {
+  background: url(img/quickit-brown.svg);
+}
+
+.ro:hover {
+  background: url(img/chokolate.svg);
 }
 
 #third_section {
@@ -395,6 +426,15 @@ header a {
 #third_section h2 {
   margin-bottom: var(--spacing-50);
   margin-top: var(--spacing-50);
+  margin-bottom: var(--spacing-30);
+  margin-top: var(--spacing-15);
+  background-color: var(--pink-main);
+  margin-right: 40rem;
+  margin-left: -24rem;
+  padding-left: 24rem;
+  padding-top: var(--spacing-20);
+  padding-bottom: var(--spacing-20);
+  border-radius: 40px;
 }
 
 #third_section h3 {
