@@ -48,6 +48,8 @@
   --spacing-90: 7.5rem;
   --spacing-100: 10rem;
 
+  --spacing-xxxl: 25rem;
+
   /****COLORS*****/
   --dark-main-gray: var(--gray-700);
   --dark-hover-gray: var(--gray-800);
@@ -445,18 +447,51 @@ header a {
   padding-bottom: 2rem;
 }
 
-/* Fourth section*/
+/*CV*/
+/*Fourth section*/
+
+.me_section figure {
+  position: relative;
+}
+.me_section article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-column: 2;
+}
+
+.me_section h2 {
+  background-color: var(--pink-main);
+  border-radius: 40px;
+  padding: var(--spacing-30);
+  padding-left: var(--spacing-80);
+}
+
+.me_section h3 {
+  padding-top: var(--spacing-20);
+  margin-left: -8rem;
+}
+
+.me_section h4 {
+  padding-top: var(--spacing-80);
+}
+
+.me_section {
+  margin-bottom: var(--spacing-80);
+  margin-top: var(--spacing-50);
+}
 
 #fourth_section h2 {
   background-color: var(--brown-main);
   color: var(--gray-50);
-  margin-left: -10rem;
-  margin-top: 3rem;
-  padding-left: 15rem;
-  margin-right: 40rem;
+  margin-bottom: var(--spacing-30);
+  margin-top: var(--spacing-20);
+  margin-left: -24rem;
+  padding-left: var(--spacing-xxxl);
   padding-top: var(--spacing-20);
   padding-bottom: var(--spacing-20);
   border-radius: 40px;
+  margin-right: 40rem;
 }
 
 #fourth_section .time_location {
@@ -490,6 +525,10 @@ header a {
   flex-direction: column;
   margin-right: var(--spacing-30);
   margin: var(--spacing-10);
+}
+
+#fourth_section .employment {
+  margin-left: var(--spacing-50);
 }
 
 /****Projects****/
@@ -600,7 +639,8 @@ header a {
   .section1,
   .project1,
   .project2,
-  .project3 {
+  .project3,
+  .me_section {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -611,7 +651,8 @@ header a {
     margin-left: var(--spacing-70);
   }
 
-  .section1 h2 {
+  .section1 h2,
+  .me_section h2 {
     margin-left: -20rem;
     padding-left: var(--spacing-100);
   }
