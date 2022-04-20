@@ -111,3 +111,42 @@ nextBtn3.addEventListener("click", (e) => {
 
   moveToSlide3(track3, currentSlide3, nextSlide3);
 });
+
+/////////////
+//SLIDER 4
+
+const track4 = document.querySelector(".carusel_tracker4");
+const slides4 = Array.from(track4.children);
+const nextBtn4 = document.querySelector(".next4");
+const prevBtn4 = document.querySelector(".prev4");
+
+const slideWidth4 = slides[0].getBoundingClientRect().width;
+
+//arrange slides next to one another
+const setSlidePosition4 = (slide4, index) => {
+  slide4.style.left = slideWidth * index + "px";
+};
+
+slides4.forEach(setSlidePosition4);
+
+const moveToSlide4 = (track4, currentSlide4, targetSlide4) => {
+  track4.style.transform = "translateX(-" + targetSlide4.style.left + ")";
+  currentSlide4.classList.remove("current_slide4");
+  targetSlide4.classList.add("current_slide4");
+};
+
+//when I click left, move slides to left
+prevBtn4.addEventListener("click", (e) => {
+  const currentSlide4 = track4.querySelector(".current_slide4");
+  const prevSlide4 = currentSlide4.previousElementSibling;
+
+  moveToSlide4(track4, currentSlide4, prevSlide4);
+});
+
+//when I click right, move slides to the right
+nextBtn4.addEventListener("click", (e) => {
+  const currentSlide4 = track4.querySelector(".current_slide4");
+  const nextSlide4 = currentSlide4.nextElementSibling;
+
+  moveToSlide4(track4, currentSlide4, nextSlide4);
+});

@@ -91,13 +91,10 @@ img {
 main {
   display: grid;
   grid-template-columns: 1fr minmax(0, 1200px) 1fr;
+  overflow: hidden;
 }
 main > section {
   grid-column: 2/3;
-}
-
-.projects_main {
-  display: block;
 }
 
 h1,
@@ -142,6 +139,7 @@ h3,
 .h3 {
   font-size: var(--heading-h3);
   color: var(--dark-main-gray);
+  font-weight: 500;
 }
 
 a {
@@ -344,21 +342,36 @@ header a {
   background-position: 20% 10%;
   margin-top: 0;
   padding: 0;
-  display: flex;
-  place-items: center;
+  display: grid;
+  grid-template-columns: max-content;
 }
 
 #first_section article {
   background-color: var(--pink-main);
-  padding: var(--spacing-50);
+  padding: var(--spacing-20);
   border-radius: 10px;
-  margin: var(--spacing-20);
+
+  margin-top: 20rem;
+  margin-bottom: var(--spacing-80);
+  margin-left: var(--spacing-10);
+  margin-right: var(--spacing-100);
+
+  display: flex;
+  flex-direction: column;
+  place-content: center;
 }
 
 .arrow {
-  margin-top: 30rem;
+  padding-right: 0;
   animation: jump 1.7s infinite;
   transform: translate(-50%, -70%);
+  margin-top: var(--spacing-80);
+  margin-bottom: var(--spacing-20);
+  padding-left: 40rem;
+}
+
+.arrow svg {
+  margin-left: 1rem;
 }
 
 @keyframes jump {
@@ -380,25 +393,22 @@ header a {
 
 #second_section h2 {
   margin-bottom: var(--spacing-30);
-  margin-top: var(--spacing-15);
+  margin-top: var(--spacing-70);
   background-color: var(--pink-main);
   margin-left: -24rem;
-  padding-left: 24rem;
+  padding-left: 25.5rem;
   padding-top: var(--spacing-20);
   padding-bottom: var(--spacing-20);
   border-radius: 40px;
+  margin-right: 10rem;
 }
 
 #second_section button {
   margin: var(--spacing-30) var(--spacing-10);
 }
 
-#second_section img {
-  padding-top: var(--spacing-30);
-}
-
 /*Third section*/
-.ro,
+.silfen,
 .quickit,
 .trash,
 .tail {
@@ -421,8 +431,8 @@ header a {
   background: url(img/quickit-brown.svg);
 }
 
-.ro:hover {
-  background: url(img/chokolate.svg);
+.silfen:hover {
+  background: url(img/silfens.svg);
 }
 
 #third_section {
@@ -430,14 +440,11 @@ header a {
 }
 
 #third_section h2 {
-  margin-bottom: var(--spacing-50);
-  margin-top: var(--spacing-50);
-  margin-bottom: var(--spacing-30);
-  margin-top: var(--spacing-15);
+  margin-top: var(--spacing-90);
   background-color: var(--pink-main);
-  margin-right: 40rem;
+  margin-right: 10rem;
   margin-left: -24rem;
-  padding-left: 24rem;
+  padding-left: 25.5rem;
   padding-top: var(--spacing-20);
   padding-bottom: var(--spacing-20);
   border-radius: 40px;
@@ -537,13 +544,20 @@ header a {
 
 /****Projects****/
 
+.projects article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 /*Section 1*/
 
-.section1,
 .project1,
 .project2,
-.project3 {
-  margin: var(--spacing-50);
+.project3,
+.project4 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  margin: var(--spacing-40);
 }
 
 .section1 figure {
@@ -566,76 +580,135 @@ header a {
 }
 
 .section1 h3 {
-  padding-left: var(--spacing-60);
   padding-top: var(--spacing-20);
 }
 
-.section1 h4 {
-  padding-top: var(--spacing-80);
+/***CARUSEL*****/
+.carusel,
+.carusel2,
+.carusel3,
+.carusel4 {
+  position: relative;
+  height: 110%;
+  width: 90%;
+  margin-top: var(--spacing-30);
+  margin-bottom: var(--spacing-30);
 }
 
-.projects article {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.carusel_img,
+.carusel_img2,
+.carusel_img3,
+.carusel_img4 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-.project1 figure {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  place-items: center;
-}
-
-.project1 img {
-  max-width: none;
-}
-
-.slider-container {
+.carusel_track_container,
+.carusel_track_container2,
+.carusel_track_container4,
+.carusel_track_container3 {
+  background: transparent;
+  height: 100%;
   position: relative;
   overflow: hidden;
 }
 
-.slider-container .slide.active {
-  clip-path: circle(150% at 0 50%);
-  transition: 1s;
+.carusel_tracker,
+.carusel_tracker2,
+.carusel_tracker3,
+.carusel_tracker4 {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 250ms ease-in;
 }
 
-.slider-container .slide img {
-  object-fit: cover;
-  margin: auto;
+.carusel_slide,
+.carusel_slide2,
+.carusel_slide3,
+.carusel_slide4 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
 }
 
-.arrows {
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  opacity: 1;
-  /* transition: opacity 0.5s ease; */
-}
-
-.prev-btn,
-.next-btn {
-  z-index: 100;
-  font-size: 2rem;
-  color: #fff;
+.carusel_button,
+.carusel_button2,
+.carusel_button3,
+.carusel_button4 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
   cursor: pointer;
-  padding: 10px;
-  background-color: var(--color-primary);
+  background: transparent;
+  margin-right: var(--spacing-15);
 }
 
-.prev-btn {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+.prev,
+.prev2,
+.prev3,
+.prev4 {
+  left: -40px;
 }
 
-.next-btn {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+.next,
+.next2,
+.next3,
+.next4 {
+  right: -40px;
 }
 
-@media (min-width: 700px) {
+.carusel_button svg,
+.carusel_button2 svg,
+.carusel_button3 svg,
+.carusel_button4 svg {
+  width: 100%;
+}
+
+footer {
+  background-color: var(--light-main-gray);
+  box-shadow: 4px -4px 10px #dbdbdb;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+}
+
+footer .contact {
+  display: flex;
+  justify-content: center;
+  margin: var(--spacing-15);
+}
+
+footer .contact a,
+footer .contactinfo {
+  display: flex;
+  margin: var(--spacing-30);
+}
+
+.item {
+  margin: var(--spacing-30);
+}
+
+.item p {
+  color: var(--dark-main-gray);
+}
+
+footer .copyrights {
+  display: flex;
+  justify-content: center;
+}
+
+footer .copyrights p {
+  margin: var(--spacing-15);
+}
+
+/*****MEDIA*****/
+@media (min-width: 800px) {
   #first_section article {
     margin: var(--spacing-90);
   }
@@ -705,15 +778,19 @@ header a {
   .project1,
   .project2,
   .project3,
+  .project4,
   .me_section {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: var(--spacing-70) var(--spacing-15);
   }
 
-  .project1 figure,
-  .project2 figure,
-  .project3 figure {
-    margin-left: var(--spacing-70);
+  .project1 .carusel,
+  .project2 .carusel2,
+  .project3 .carusel3,
+  .project4 .carusel4 {
+    margin-left: var(--spacing-50);
   }
 
   .section1 h2,
@@ -721,90 +798,49 @@ header a {
     margin-left: -20rem;
     padding-left: var(--spacing-100);
   }
-}
 
-/***CARUSEL*****/
-.carusel,
-.carusel2,
-.carusel3,
-.carusel4 {
-  position: relative;
-  height: auto;
-  width: 80%;
-  margin: 0 auto;
-}
+  #first_section {
+    display: flex;
+    place-items: center;
+  }
 
-.carusel_img,
-.carusel_img2,
-.carusel_img3,
-.carusel_img4 {
-  width: 100%;
-  height: auto;
-  object-fit: fit;
-}
+  #first_section article {
+    margin: var(--spacing-40);
+  }
 
-.carusel_track_container,
-.carusel_track_container2,
-.carusel_track_container4,
-.carusel_track_container3 {
-  background: transparent;
+  .arrow {
+    margin-top: 50rem;
+    padding-right: var(--spacing-90);
+    margin-right: var(--spacing-30);
+  }
 
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
+  .arrow svg {
+    margin-right: var(--spacing-20);
+  }
 
-.carusel_tracker,
-.carusel_tracker2,
-.carusel_tracker3,
-.carusel_tracker4 {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  position: relative;
-  height: 100%;
-  transition: transform 250ms ease-in;
-}
+  #second_section h2 {
+    margin-bottom: var(--spacing-30);
+    margin-top: var(--spacing-15);
+    margin-left: -24rem;
+    padding-left: 24rem;
+    padding-top: var(--spacing-20);
+    padding-bottom: var(--spacing-20);
+  }
 
-.carusel_slide,
-.carusel_slide2,
-.carusel_slide3,
-.carusel_slide4 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-}
+  #second_section img {
+    padding-top: var(--spacing-30);
+  }
 
-.carusel_button,
-.carusel_button2,
-.carusel_button3,
-.carusel_button4 {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 0;
-  cursor: pointer;
-  background: transparent;
-}
+  #third_section h2 {
+    margin-bottom: var(--spacing-50);
+    margin-top: var(--spacing-50);
+    margin-bottom: var(--spacing-30);
+    margin-top: var(--spacing-15);
 
-.prev,
-.prev2,
-.prev3,
-.prev4 {
-  left: -40px;
-}
-
-.next,
-.next2,
-.next3,
-.next4 {
-  right: -40px;
-}
-
-.carusel_button svg,
-.carusel_button2 svg,
-.carusel_button3 svg,
-.carusel_button4 svg {
-  width: 100%;
+    margin-right: 40rem;
+    margin-left: -24rem;
+    padding-left: 24rem;
+    padding-top: var(--spacing-20);
+    padding-bottom: var(--spacing-20);
+  }
 }
