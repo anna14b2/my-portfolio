@@ -476,15 +476,17 @@ header a {
   border-radius: 40px;
   padding: var(--spacing-30);
   padding-left: var(--spacing-80);
+  margin-left: -4rem;
+  margin-right: 4rem;
 }
-
 .me_section h3 {
   padding-top: var(--spacing-20);
-  margin-left: -8rem;
+  margin-left: 4rem;
 }
 
 .me_section h4 {
   padding-top: var(--spacing-80);
+  padding-left: var(--spacing-30);
 }
 
 .me_section {
@@ -497,12 +499,12 @@ header a {
   color: var(--gray-50);
   margin-bottom: var(--spacing-30);
   margin-top: var(--spacing-20);
-  margin-left: -24rem;
-  padding-left: var(--spacing-xxxl);
+  margin-left: -10rem;
+  padding-left: 12rem;
   padding-top: var(--spacing-20);
   padding-bottom: var(--spacing-20);
   border-radius: 40px;
-  margin-right: 40rem;
+  margin-right: 20rem;
 }
 
 #fourth_section .time_location {
@@ -842,5 +844,23 @@ footer .copyrights p {
     padding-left: 24rem;
     padding-top: var(--spacing-20);
     padding-bottom: var(--spacing-20);
+  }
+
+  .me_section h3 {
+    padding-top: var(--spacing-20);
+    margin-left: -8rem;
+  }
+
+  #fourth_section h2 {
+    background-color: var(--brown-main);
+    color: var(--gray-50);
+    margin-bottom: var(--spacing-30);
+    margin-top: var(--spacing-20);
+    margin-left: -24rem;
+    padding-left: var(--spacing-xxxl);
+    padding-top: var(--spacing-20);
+    padding-bottom: var(--spacing-20);
+    border-radius: 40px;
+    margin-right: 40rem;
   }
 }
