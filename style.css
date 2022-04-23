@@ -643,7 +643,7 @@ header a {
 .carusel_button3,
 .carusel_button4 {
   position: absolute;
-  top: 50%;
+  top: 30%;
   transform: translateY(-50%);
   border: 0;
   cursor: pointer;
@@ -862,5 +862,12 @@ footer .copyrights p {
     padding-bottom: var(--spacing-20);
     border-radius: 40px;
     margin-right: 40rem;
+  }
+
+  .carusel_button,
+  .carusel_button2,
+  .carusel_button3,
+  .carusel_button4 {
+    top: 50%;
   }
 }
