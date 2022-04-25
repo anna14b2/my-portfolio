@@ -80,7 +80,6 @@
 
 body {
   background-color: var(--light-main-gray);
-  overflow: hidden;
 }
 
 img {
@@ -199,6 +198,7 @@ header {
   background-color: var(--light-main-gray);
   box-shadow: 4px -4px 10px #afafaf;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 header li {
@@ -679,6 +679,7 @@ footer {
   flex-wrap: wrap;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 footer .contact {
