@@ -80,6 +80,7 @@
 
 body {
   background-color: var(--light-main-gray);
+  overflow: hidden;
 }
 
 img {
