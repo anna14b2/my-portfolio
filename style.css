@@ -307,14 +307,13 @@ header a {
 .mobile-menu {
   position: fixed;
   right: 0;
-  top: var(--spacing-60);
-  background-color: var(--light-20);
+  top: var(--spacing-70);
   width: 90%;
   height: 100%;
   padding: var(--spacing-20);
   transition: all 0.6s;
   z-index: 10;
-  background-color: var(--gray-50);
+  background-color: var(--light-main-gray);
 }
 
 .mobile-menu li {
@@ -352,14 +351,22 @@ header a {
   padding: var(--spacing-20);
   border-radius: 10px;
 
-  margin-top: 20rem;
+  margin-top: 14rem;
   margin-bottom: var(--spacing-80);
   margin-left: var(--spacing-10);
-  margin-right: var(--spacing-100);
+  margin-right: 20rem;
 
   display: flex;
   flex-direction: column;
   place-content: center;
+}
+
+#first_section h1 {
+  font-size: var(--heading-h1);
+}
+
+#first_section h3 {
+  font-size: var(--font-size-sm);
 }
 
 .arrow {
@@ -368,7 +375,7 @@ header a {
   transform: translate(-50%, -70%);
   margin-top: var(--spacing-80);
   margin-bottom: var(--spacing-20);
-  padding-left: 40rem;
+  padding-left: 32rem;
 }
 
 .arrow svg {
@@ -441,11 +448,11 @@ header a {
 }
 
 #third_section h2 {
-  margin-top: var(--spacing-90);
+  margin-top: var(--spacing-80);
   background-color: var(--pink-main);
-  margin-right: 10rem;
-  margin-left: -24rem;
-  padding-left: 25.5rem;
+  margin-right: 3rem;
+  margin-left: -20rem;
+  padding-left: 23rem;
   padding-top: var(--spacing-20);
   padding-bottom: var(--spacing-20);
   border-radius: 40px;
@@ -482,7 +489,7 @@ header a {
 }
 .me_section h3 {
   padding-top: var(--spacing-20);
-  margin-left: 4rem;
+  margin-left: 1rem;
 }
 
 .me_section h4 {
@@ -505,7 +512,7 @@ header a {
   padding-top: var(--spacing-20);
   padding-bottom: var(--spacing-20);
   border-radius: 40px;
-  margin-right: 20rem;
+  margin-right: var(--spacing-100);
 }
 
 #fourth_section .time_location {
@@ -541,8 +548,26 @@ header a {
   margin: var(--spacing-10);
 }
 
+#fourth_section .education {
+  margin-left: var(--spacing-20);
+  margin-top: var(--spacing-50);
+}
+
+#fourth_section .education li .psm {
+  font-size: var(--font-size-sm);
+}
+
 #fourth_section .employment {
-  margin-left: var(--spacing-50);
+  margin-left: var(--spacing-20);
+  margin-top: var(--spacing-50);
+}
+
+#fourth_section .employment_history li {
+  margin: var(--spacing-20);
+}
+
+#fourth_section .employment_history li .psm {
+  font-size: var(--font-size-sm);
 }
 
 /****Projects****/
@@ -685,17 +710,17 @@ footer {
 footer .contact {
   display: flex;
   justify-content: center;
-  margin: var(--spacing-15);
+  margin: var(--spacing-10);
 }
 
 footer .contact a,
 footer .contactinfo {
   display: flex;
-  margin: var(--spacing-30);
+  margin: var(--spacing-10);
 }
 
 .item {
-  margin: var(--spacing-30);
+  margin: var(--spacing-10);
 }
 
 .item p {
@@ -705,22 +730,36 @@ footer .contactinfo {
 footer .copyrights {
   display: flex;
   justify-content: center;
+  padding: var(--spacing-20);
 }
 
 footer .copyrights p {
-  margin: var(--spacing-15);
+  margin: 0.4rem;
+}
+
+footer p {
+  font-size: var(--font-size-sm);
 }
 
 /*****MEDIA*****/
 @media (min-width: 800px) {
   #first_section article {
     margin: var(--spacing-90);
+    padding: var(--spacing-20);
+
+    margin-top: 20rem;
+    margin-bottom: var(--spacing-80);
+    margin-left: var(--spacing-10);
+    margin-right: var(--spacing-100);
   }
+
   #first_section h1 {
     margin: var(--spacing-10);
+    font-size: var(--display-heading);
   }
   #first_section h3 {
     margin: var(--spacing-10);
+    font-size: var(--body-text-lead);
   }
 
   #second_section {
@@ -753,11 +792,21 @@ footer .copyrights p {
     margin-left: 2rem;
   }
 
+  #third_section h2 {
+    margin-top: var(--spacing-90);
+    margin-right: 10rem;
+    margin-left: -24rem;
+    padding-left: 25.5rem;
+    padding-top: var(--spacing-20);
+    padding-bottom: var(--spacing-20);
+  }
+
   #third_section .projects {
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin-top: 2rem;
   }
+
   #third_section .projects2 {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -772,7 +821,19 @@ footer .copyrights p {
 
   #fourth_section li {
     margin-right: var(--spacing-80);
-    margin-bottom: auto;
+    margin-bottom: var(--spacing-40);
+  }
+
+  #fourth_section .employment {
+    margin-left: var(--spacing-60);
+    margin-top: var(--spacing-50);
+  }
+
+  .me_section h2 {
+    padding: var(--spacing-30);
+    padding-left: var(--spacing-80);
+    margin-left: -4rem;
+    margin-right: 4rem;
   }
 
   /*Projects site*/
@@ -871,5 +932,26 @@ footer .copyrights p {
   .carusel_button3,
   .carusel_button4 {
     top: 50%;
+  }
+
+  footer .copyrights p {
+    margin: var(--spacing-15);
+  }
+
+  footer .contact {
+    margin: var(--spacing-15);
+  }
+
+  footer .contact a,
+  footer .contactinfo {
+    margin: var(--spacing-30);
+  }
+
+  .item {
+    margin: var(--spacing-30);
+  }
+
+  footer p {
+    font-size: var(--body-text);
   }
 }
