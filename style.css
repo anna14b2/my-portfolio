@@ -471,6 +471,7 @@ header a {
 
 .me_section figure {
   position: relative;
+  width: 80%;
 }
 .me_section article {
   display: flex;
