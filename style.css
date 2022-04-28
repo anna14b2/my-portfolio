@@ -591,6 +591,7 @@ header a {
 .section1 figure {
   position: relative;
   margin-right: var(--spacing-20);
+  visibility: visible;
 }
 .section1 article {
   display: flex;
@@ -601,14 +602,20 @@ header a {
 
 .section1 h2 {
   background-color: var(--pink-main);
-  border-radius: 40px;
-  padding: var(--spacing-30);
-  margin-left: -10rem;
-  padding-left: var(--spacing-100);
+  border-radius: 30px;
+  padding: var(--spacing-20);
+  font-size: var(--heading-h3);
+  padding-left: var(--spacing-50);
+  margin-left: -2rem;
+  margin-right: var(--spacing-10);
+  margin-top: -2rem;
+  position: absolute;
 }
 
 .section1 h3 {
-  padding-top: var(--spacing-20);
+  padding-top: var(--spacing-70);
+  font-size: var(--body-text-lead);
+  padding-left: var(--spacing-15);
 }
 
 /***CARUSEL*****/
@@ -851,6 +858,10 @@ footer p {
     margin: var(--spacing-70) var(--spacing-15);
   }
 
+  .section2 h2 {
+    position: none;
+  }
+
   .project1 .carusel,
   .project2 .carusel2,
   .project3 .carusel3,
@@ -862,6 +873,10 @@ footer p {
   .me_section h2 {
     margin-left: -20rem;
     padding-left: var(--spacing-100);
+  }
+
+  .section1 figure {
+    visibility: visible;
   }
 
   #first_section {
