@@ -27,13 +27,13 @@
 
   /*****FONT SIZE*****/
   /* Font scale heading */
-  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
-  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
-  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
-  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
-  --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
-  --font-size-xxxl: clamp(3rem, 3.5vw + 2.1rem, 5rem);
+  --font-size-sm: clamp(0.7rem, 0.15vw + 0.74rem, 0.87rem);
+  --font-size-base: clamp(0.8rem, 0.32vw + 0.88rem, 1.17rem);
+  --font-size-md: clamp(1.23rem, 0.59vw + 1rem, 1.55rem);
+  --font-size-lg: clamp(1.54rem, 0.8vw + 1.29rem, 2.09rem);
+  --font-size-xl: clamp(1.92rem, 1.53vw + 1.53rem, 2.78rem);
+  --font-size-xxl: clamp(2.41rem, 2.35vw + 1.83rem, 3.73rem);
+  --font-size-xxxl: clamp(2.8rem, 3.3vw + 2rem, 4.7rem);
 
   /* Spacing */
   --spacing-10: 0.625rem;
